@@ -1,0 +1,20 @@
+Explanation of the Approach:
+
+1.Data Loading and Validation:
+     The script reads the Excel file using pandas.
+It ensures all required columns (Student ID, Name, Subject, Score) are present.
+
+2.Data Aggregation:
+    It calculates the total and average scores per student using groupby.
+
+3.PDF Generation:
+   For each student, a personalized PDF is created with:
+     Their name, total score, and average score.
+      A table of their subject-wise scores.
+   The PDFs are named as report_card_<StudentID>.pdf and saved in a report_cards directory.
+
+4.Error Handling:
+   The script checks for missing columns and handles unexpected errors gracefully.
+
+5.Reusable Functions:
+   A separate function, generate_pdf, is used for creating the PDF, ensuring modularity.
